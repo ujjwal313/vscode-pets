@@ -20,6 +20,7 @@
     "keywords": [
         "pet",
         "cat",
+        "bunny",
         "chicken",
         "dog",
         "pets",
@@ -179,6 +180,7 @@
                     "vscode-pets.petType": {
                         "type": "string",
                         "enum": [
+                            "bunny",
                             "cat",
                             "chicken",
                             "crab",

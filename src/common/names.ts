@@ -16,12 +16,14 @@ import { ZAPPY_NAMES } from '../panel/pets/zappy';
 import { RAT_NAMES } from '../panel/pets/rat';
 import { TURTLE_NAMES } from '../panel/pets/turtle';
 import { HORSE_NAMES } from '../panel/pets/horse';
+import { BUNNY_NAMES } from '../panel/pets/bunny';
 import { PetType } from './types';
 
 export function randomName(type: PetType): string {
     const collection: ReadonlyArray<string> =
         (
             {
+                [PetType.bunny]: BUNNY_NAMES,
                 [PetType.cat]: CAT_NAMES,
                 [PetType.chicken]: CHICKEN_NAMES,
                 [PetType.dog]: DOG_NAMES,

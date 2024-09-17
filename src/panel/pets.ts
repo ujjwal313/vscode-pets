@@ -1,4 +1,5 @@
 import { PetColor, PetSize, PetSpeed, PetType } from '../common/types';
+import { Bunny } from './pets/bunny';
 import { Cat } from './pets/cat';
 import { Chicken } from './pets/chicken';
 import { Clippy } from './pets/clippy';
@@ -177,6 +178,8 @@ export function createPet(
     ] = [el, collision, speech, size, left, bottom, petRoot, floor, name];
 
     switch (petType) {
+        case PetType.bunny:
+            return new Bunny(...standardPetArguments, PetSpeed.normal);
         case PetType.cat:
             return new Cat(...standardPetArguments, PetSpeed.normal);
         case PetType.chicken:
@@ -220,6 +223,8 @@ export function createPet(
 
 export function availableColors(petType: PetType): PetColor[] {
     switch (petType) {
+        case PetType.bunny:
+            return Bunny.possibleColors;
         case PetType.cat:
             return Cat.possibleColors;
         case PetType.chicken:
